@@ -20,7 +20,7 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
     - name: Install Chromium
-      run: pwd && chmod 755 ../chromium.sh
+      run: pwd && chmod 755 scripts/chromium.sh
       # run: sudo apt-get install chromium-browser
     - name: Check version of Chromium
       run: chromium --product-version

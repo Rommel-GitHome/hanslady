@@ -24,4 +24,4 @@ jobs:
       # run: chmod 777 scripts/chromium.sh && scripts/chromium.sh
       # run: sudo apt-get install chromium-browser
       - name: Check version of Chromium
-        run: cat /etc/os-release
+        run: chromium --version

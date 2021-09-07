@@ -15,3 +15,5 @@ jobs:
         run: sudo apt-get install npm && nodejs -v
       - name: Install TestCafe
         run: npm install -g testcafe
+      - name: Run TestCafe Tests
+        run: testcafe chromium --skip-js-errors --speed 0.75 theme-designer.js 

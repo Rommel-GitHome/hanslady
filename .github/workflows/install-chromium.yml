@@ -17,4 +17,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: browser-actions/setup-chrome@latest
-      - run: chrome --version
+      - run: chromium --version

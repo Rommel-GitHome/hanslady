@@ -18,4 +18,4 @@ jobs:
         run: npm install -g testcafe
       - name: Run TestCafe Tests
         #run: testcafe --list-browsers
-        run: testcafe chrome:/opt/hostedtoolcache/chromium/latest/x64:headless --skip-js-errors --speed 0.75 --browser-init-timeout 180000 scripts/theme-designer.js 
+        run: testcafe "chrome:/opt/hostedtoolcache/chromium/latest/x64:headless --no-sandbox" --skip-js-errors --speed 0.75 --browser-init-timeout 180000 scripts/theme-designer.js 

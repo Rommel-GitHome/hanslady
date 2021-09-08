@@ -8,6 +8,7 @@ jobs:
   build-testcafe:
     runs-on: ubuntu-20.04
     steps:
+      - uses: browser-actions/setup-chrome@latest
       - uses: actions/checkout@v2
       - name: Install nodeJS
         run: sudo apt-get update && sudo apt-get -y install nodejs
@@ -16,5 +17,5 @@ jobs:
       - name: Install TestCafe
         run: npm install -g testcafe
       - name: Run TestCafe Tests
-        run: testcafe --list-browsers
-        #run: testcafe chromium:headless --skip-js-errors --speed 0.75 scripts/theme-designer.js 
+        #run: testcafe --list-browsers
+        run: testcafe chrome:headless --skip-js-errors --speed 0.75 scripts/theme-designer.js 
